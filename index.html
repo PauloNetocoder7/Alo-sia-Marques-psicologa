@@ -21,14 +21,74 @@
         :root {
             --primary: #6AB5BC;
             --primary-dark: #56A0A7;
+            --primary-soft: rgba(106, 181, 188, 0.1);
             --bg-light: #FFFFFF;
+            --bg-gray: #F0F2F5;
             --text-main: #1A1A1A;
             --text-muted: #4A4A4A;
+            --white: #ffffff;
             --font-body: 'Inter', sans-serif;
             --font-heading: 'Montserrat', sans-serif;
             --font-script: 'Dancing Script', cursive;
         }
-        body { background-color: var(--bg-light); color: var(--text-main); margin: 0; }
+        
+        body { 
+            background-color: #FFFFFF; 
+            color: #1A1A1A; 
+            margin: 0; 
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .fade-in { opacity: 0; }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        section { padding: 100px 0; position: relative; }
+        
+        .hero { 
+            min-height: 80vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center;
+        }
+
+        .hero-tagline {
+            font-size: 0.85rem;
+            color: #4A4A4A;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem 2.8rem;
+            background-color: #6AB5BC;
+            color: #ffffff;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border: 2px solid #6AB5BC;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #6AB5BC;
+        }
+
+        .section-head { text-align: center; margin-bottom: 4rem; }
+        .section-head h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .section-head .line { width: 60px; height: 3px; background: #6AB5BC; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -60,9 +120,9 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-grid">
-                <div class="hero-text" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <div class="hero-text" style="text-align: center; width: 100%; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
                     <p class="fade-in hero-tagline">Psicologia Clínica | Acolhimento, Ética e Autoconhecimento.</p>
-                    <div class="fade-in" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <div class="fade-in" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; width: 100%;">
                         <a href="#agendamento" class="btn">Agendar Sessão</a>
                         <a href="#sobre" class="btn btn-outline">Minha Abordagem</a>
                     </div>
@@ -107,12 +167,32 @@
     <!-- About -->
     <section class="about" id="sobre">
         <div class="container">
-            <div class="about-text fade-in" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <span class="script-font" style="font-size: 2rem; color: var(--primary);">Um pouco sobre mim</span>
-                <h2>Aloísia Marques</h2>
-                <p>Sou Psicóloga Clínica com o compromisso de oferecer uma escuta atenta e humanizada. Acredito na terapia como uma parceria potente para o desenvolvimento de ferramentas emocionais.</p>
-                <p>Minha prática é baseada na ética e no acolhimento, criando um espaço seguro onde você pode ser quem realmente é, sem julgamentos.</p>
-                <a href="#agendamento" class="btn btn-outline" style="margin-top: 1rem;">Meus Contatos</a>
+            <div class="about-grid">
+                <div class="about-img-wrapper fade-in">
+                    <img src="https://images.unsplash.com/photo-1544717297-fa95b3ee9643?q=80&w=2069&auto=format&fit=crop" class="about-img" alt="Aloísia Marques">
+                </div>
+                <div class="about-text fade-in">
+                    <span class="script-font" style="font-size: 1.8rem; color: var(--primary);">Um pouco sobre mim</span>
+                    <h2 style="margin-top: 1rem; font-size: 2.8rem; margin-bottom: 1.5rem;">Aloísia Marques</h2>
+                    <p>Sou Psicóloga Clínica com o compromisso de oferecer uma escuta atenta e humanizada. Acredito na terapia como uma parceria potente para o desenvolvimento de ferramentas emocionais.</p>
+                    <p>Minha prática é baseada na ética e no acolhimento, criando um espaço seguro onde você pode ser quem realmente é, sem julgamentos.</p>
+                    <div style="margin-top: 2rem;">
+                        <ul style="list-style: none; display: grid; gap: 1rem;">
+                            <li style="display: flex; align-items: center; gap: 1rem; font-weight: 500;">
+                                <div style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></div>
+                                Atendimento para Adultos e Adolescentes
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1rem; font-weight: 500;">
+                                <div style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></div>
+                                Consultas Presenciais e Online
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1rem; font-weight: 500;">
+                                <div style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></div>
+                                Foco em desenvolvimento humano
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -101,19 +101,18 @@ h1, h2, h3, h4 {
     color: var(--white);
 }
 
-/* Header */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     transition: var(--transition);
 }
 
 header.scrolled {
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     background-color: var(--white);
     box-shadow: 0 5px 30px rgba(0,0,0,0.08);
 }
@@ -242,12 +241,16 @@ header .container {
 
 .section-head {
     text-align: center;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section-head h2 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 1.25rem;
+    max-width: 700px;
 }
 
 .section-head .line {
@@ -266,10 +269,14 @@ header .container {
 
 .spec-card {
     background-color: #fff;
-    padding: 4rem 2.5rem;
+    padding: 3.5rem 2rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
     border: 1px solid var(--bg-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .spec-card:hover {
@@ -310,16 +317,22 @@ header .container {
 }
 
 .about-grid {
-    display: block;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.about-text {
+    text-align: left;
 }
 
 .about-img {
     width: 100%;
+    height: 550px;
+    object-fit: cover;
     border-radius: var(--border-radius);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
 }
 
 .about-text h2 {
@@ -370,11 +383,12 @@ header .container {
 .contact-wrapper {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    padding: 5rem;
-    box-shadow: 0 50px 100px rgba(0,0,0,0.05);
+    padding: 4rem;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.03);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 4rem;
+    align-items: start;
 }
 
 .contact-form {
