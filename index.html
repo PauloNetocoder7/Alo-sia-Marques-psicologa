@@ -7,7 +7,7 @@
     <meta name="description" content="Psicóloga Clínica Aloísia Marques - Acolhimento, empatia e desenvolvimento emocional para sua saúde mental.">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     
     <!-- Icons (Lucide) -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -15,7 +15,21 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6AB5BC;
+            --primary-dark: #56A0A7;
+            --bg-light: #FFFFFF;
+            --text-main: #1A1A1A;
+            --text-muted: #4A4A4A;
+            --font-body: 'Inter', sans-serif;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-script: 'Dancing Script', cursive;
+        }
+        body { background-color: var(--bg-light); color: var(--text-main); margin: 0; }
+    </style>
 </head>
 <body>
 
@@ -197,6 +211,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
